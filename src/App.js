@@ -1,10 +1,16 @@
 import React from 'react'
+import UsersList from './modules/UsersList/containers'
+import { GlobalStyle } from './styles'
+import { UsersProvider } from './context/usersContext'
 
 function App () {
   return (
-    <div>
-      Teste
-    </div>
+    <UsersProvider>
+      <>
+        <GlobalStyle />
+        <UsersList />
+      </>
+    </UsersProvider>
   )
 }
 export default App
