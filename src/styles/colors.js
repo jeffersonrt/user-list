@@ -2,7 +2,7 @@ export const colors = {
   main: '#d05962',
   divider: '#e3d4b9',
   background: '#f5f0e9',
-  surface: '#f36856',
+  surface: '#e3d4b9',
   textMain: '#4e4940',
   textComplementary: '#d05962',
   textClean: '#ffff',

@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    font-size: 10px;
     width: 100%;
     height: 100%;
   }
@@ -31,8 +30,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   /* Remove default padding */
-  ul[class],
-  ol[class] {
+  ul,
+  ol {
     padding: 0;
   }
   /* Remove default margin */

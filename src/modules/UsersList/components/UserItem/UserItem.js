@@ -4,14 +4,14 @@ import * as S from './UserItemStyles'
 
 function UserItem ({ user }) {
   return (
-    <S.Container>
+    <S.Row>
       <S.Column>
         {user.name}
       </S.Column>
       <S.Column>
         {user.age}
       </S.Column>
-    </S.Container>
+    </S.Row>
   )
 }
 

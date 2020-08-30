@@ -14,4 +14,5 @@ export const Container = styled.div`
   margin: ${grid.large} 0;
   background: ${colors.baseWhite};
   border-radius: ${grid.radius};
+  box-shadow: 3px 4px 17px -2px ${colors.surface};
 `
