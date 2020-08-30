@@ -4,7 +4,7 @@ import List from '../components/List'
 import SearchBar from '../components/SearchBar'
 
 function UsersList () {
-  const { list: userList } = useUsersState()
+  const { list: userList, error } = useUsersState()
   const userDispatch = useUsersDispatch()
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -14,16 +14,19 @@ function UsersList () {
 
   useEffect(() => {
     fetchUsersList(userDispatch)
-  }, [])
+  }, [userDispatch])
 
   return (
     <div>
       <SearchBar
         onChange={handleSearch}
-        placeholder="Search by name or age"
+        placeholder="Filter by name or age"
         value={searchTerm}
       />
-      <List data={userList.slice(0, 20)} filter={searchTerm}/>
+      {error
+        ? <div>{error}</div>
+        : <List data={userList} filter={searchTerm}/>
+      }
 
     </div>
   )

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import UserItem from '../UserItem'
 
 export const searchFilter = ({ name, age }, term) => {
-  return name.toLowerCase().includes(term) || age.toString().includes(term)
+  return name.toLowerCase().includes(term.toLowerCase()) || age.toString().includes(term)
 }
 
 function List ({ data, filter }) {

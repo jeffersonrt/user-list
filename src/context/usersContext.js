@@ -9,7 +9,7 @@ const UsersDispatchContext = React.createContext()
 const INITIAL_STATE = {
   list: [],
   isLoading: false,
-  erro: ''
+  error: ''
 }
 
 const TYPES = {
@@ -27,7 +27,7 @@ function userReducer (state, action) {
       return { ...state, list: action.payload.data, isLoading: false }
     }
     case TYPES.failure: {
-      return { ...state, erro: action.payload.data, isLoading: false }
+      return { ...state, error: action.payload.error, isLoading: false }
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
