@@ -15,7 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:w": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage --detectOpenHandles",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,5 +45,12 @@
     "git-commit-msg-linter": "^2.5.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/**/*index.js"
+    ]
   }
 }
